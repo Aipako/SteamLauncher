@@ -1,0 +1,23 @@
+﻿<Window x:Class="SteamLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SteamLauncher"
+        mc:Ignorable="d"
+        Title="Steam launcher" Height="450" Width="800">
+    <Grid>
+        <CheckBox Content="Tray Mode" HorizontalAlignment="Left" Margin="630,96,0,0" VerticalAlignment="Top" IsEnabled="false"/>
+        <CheckBox Content="Autostart" HorizontalAlignment="Left" Margin="630,116,0,0" VerticalAlignment="Top" IsEnabled="false"/>
+        <StackPanel Margin="10,116,175,18">
+            <ItemsControl x:Name="Accounts">
+
+            </ItemsControl>
+        </StackPanel>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Height="35" Width="84" Click="Button_Add_Account_Click"/>
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="99,69,0,0" VerticalAlignment="Top" Height="35" Width="84" Click="Button_Remove_Account_Click"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="508,69,0,0" VerticalAlignment="Top" Height="35" Width="84" Click="Button_Login_Account_Click"/>
+        <Button Content="Logoff" HorizontalAlignment="Left" Margin="419,69,0,0" VerticalAlignment="Top" Height="35" Width="84" Click="Button_Logoff_Account_Click"/>
+
+    </Grid>
+</Window>
