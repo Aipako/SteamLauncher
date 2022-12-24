@@ -18,6 +18,7 @@
         <Button Content="Remove" HorizontalAlignment="Left" Margin="99,69,0,0" VerticalAlignment="Top" Height="35" Width="84" Click="Button_Remove_Account_Click"/>
         <Button Content="Login" HorizontalAlignment="Left" Margin="508,69,0,0" VerticalAlignment="Top" Height="35" Width="84" Click="Button_Login_Account_Click"/>
         <Button Content="Logoff" HorizontalAlignment="Left" Margin="419,69,0,0" VerticalAlignment="Top" Height="35" Width="84" Click="Button_Logoff_Account_Click"/>
+        <Button Name="PathesBtn" Content="Pathes" HorizontalAlignment="Left" Margin="630,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.015,-1.108" Height="35" Width="84"/>
 
     </Grid>
 </Window>

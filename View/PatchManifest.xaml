@@ -1,0 +1,21 @@
+﻿<Window x:Class="SteamLauncher.View.PatchManifest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SteamLauncher.View"
+        mc:Ignorable="d"
+        Title="Patch manifest" Height="200" Width="430">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="Game ID " VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="64,34,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="Executable path" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="99,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="348,60,0,0" VerticalAlignment="Top" Height="18" Width="13"/>
+        <Button Content="Patch" HorizontalAlignment="Left" Margin="15,128,0,0" VerticalAlignment="Top" Height="39" Width="55"/>
+        <Button Content="Restore" HorizontalAlignment="Left" Margin="82,128,0,0" VerticalAlignment="Top" Height="39" Width="55"/>
+        <TextBlock Name="IdErrorBlock" HorizontalAlignment="Left" Margin="144,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+        <TextBlock Name="PathErrorBlock" HorizontalAlignment="Left" Margin="10,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
+
+    </Grid>
+</Window>

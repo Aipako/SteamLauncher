@@ -19,18 +19,19 @@ using System.IO;
 
 namespace SteamLauncher
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         public List<Button> AccountButtons = new List<Button>();
 
         private AccountSelector MyAccountSelector;
+        private PatchesController MyPatchesController;
         public MainWindow()
         {
             InitializeComponent();
             MyAccountSelector = InitializeAccountSelector();
+            MyPatchesController = InitializePatchesController();
+
             UserData.InitializeUserData();
             SteamProcess.InitSteamDirectory();
             Accounts.ItemsSource = AccountButtons;
@@ -116,6 +117,14 @@ namespace SteamLauncher
         {
             return new AccountSelector(this);
         }
+
+        private PatchesController InitializePatchesController()
+        {
+            PatchesController ptchController = new PatchesController(this);
+            PathesBtn.Click += ptchController.OnPatchesButtonClick;
+            return ptchController; 
+        }
+
         private SteamAccount GetActiveSteamAccount()
         {
 
