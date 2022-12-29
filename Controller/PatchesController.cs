@@ -7,9 +7,11 @@ using SteamLauncher.Model;
 using SteamLauncher.View;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Win32;
+using System.IO;
 namespace SteamLauncher.Controller
 {
-    internal class PatchesController
+    public class PatchesController
     {
         private SteamLauncher.MainWindow MainInstance { get; set; }
 
@@ -30,7 +32,7 @@ namespace SteamLauncher.Controller
 
         private PatchManifest GetPatchesWindow()
         {
-            PatchManifest ptchManifest = new PatchManifest();
+            PatchManifest ptchManifest = new PatchManifest(this);
             ptchManifest.Closed += OnPatchesWindowClosed;
             return ptchManifest;
         }
@@ -38,6 +40,44 @@ namespace SteamLauncher.Controller
         public void OnPatchesWindowClosed(object sender, EventArgs e)
         {
             PatchesWindowInstance = null;
+        }
+
+        
+
+        // Event handling
+
+        public void OnFileDialogButtonClick(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Executable files (*.exe)|*.exe|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+                PatchesWindowInstance.FilePathBox.Text = openFileDialog.FileName;
+        }
+
+        public void OnPatchButtonClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void OnRestoreButtonClick(object sender, EventArgs e)
+        {
+
+        }
+        
+        // Actions with View
+
+        private int GetGameId()
+        {
+            
+            return -1;
+        }
+
+        // Inner Methods
+
+        private bool VerifyGameId()
+        {
+
+            return false;
         }
     }
 }

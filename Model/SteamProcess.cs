@@ -109,9 +109,16 @@ namespace SteamLauncher.Model
             }
         }
 
+        public static string GetGameDirectoryById()
+        {
+
+        }
+
         private static void SetRegistryAccountName(string accountName)
         {
             Registry.SetValue(Constants.STEAM_REGISTRY_USER_PATH, "AutoLoginUser", accountName);
         }
+
+        private
     }
 }
